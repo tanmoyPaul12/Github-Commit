@@ -1,0 +1,521 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Arial', sans-serif;
+    background-color: #ffffff;
+    color: #000000;
+    line-height: 1.6;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+}
+
+/* Navbar Styles */
+.navbar {
+    background-color: #000000;
+    padding: 1rem 0;
+    position: sticky;
+    top: 0;
+    z-index: 100;
+}
+
+.nav-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 2rem;
+}
+
+.logo {
+    color: #ffffff;
+    font-size: 1.5rem;
+    font-weight: bold;
+    text-decoration: none;
+}
+
+.nav-links {
+    display: flex;
+    list-style: none;
+    gap: 2rem;
+}
+
+.nav-links a {
+    color: #ffffff;
+    text-decoration: none;
+    transition: color 0.3s ease;
+    padding: 0.5rem 1rem;
+}
+
+.nav-links a:hover {
+    color: #cccccc;
+    background-color: #333333;
+}
+
+/* Mobile menu toggle */
+.menu-toggle {
+    display: none;
+    background: none;
+    border: none;
+    color: #ffffff;
+    font-size: 1.5rem;
+    cursor: pointer;
+}
+
+/* Main Content */
+.main-content {
+    flex: 1;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 2rem;
+    width: 100%;
+}
+
+.hero {
+    text-align: center;
+    margin-bottom: 3rem;
+    padding: 2rem 0;
+}
+
+.hero-content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 2rem;
+}
+
+.github-logo {
+    width: 80px;
+    height: 80px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.github-logo img {
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+    transition: transform 0.3s ease;
+}
+
+.github-logo:hover img {
+    transform: scale(1.1);
+}
+
+.hero-text h1 {
+    font-size: 2.5rem;
+    margin-bottom: 1rem;
+}
+
+.hero-text p {
+    font-size: 1.1rem;
+    color: #666666;
+    max-width: 600px;
+}
+
+/* Form Styles */
+.search-form {
+    background-color: #f8f8f8;
+    padding: 2rem;
+    border: 2px solid #000000;
+    margin-bottom: 2rem;
+    max-width: 600px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.form-row {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 1rem;
+    margin-bottom: 1rem;
+}
+
+.form-group {
+    margin-bottom: 1rem;
+}
+
+.form-group label {
+    display: block;
+    margin-bottom: 0.5rem;
+    font-weight: bold;
+}
+
+.form-group input {
+    width: 100%;
+    padding: 0.75rem;
+    border: 1px solid #000000;
+    background-color: #ffffff;
+    font-size: 1rem;
+}
+
+.btn {
+    background-color: #000000;
+    color: #ffffff;
+    padding: 0.75rem 2rem;
+    border: none;
+    cursor: pointer;
+    font-size: 1rem;
+    transition: background-color 0.3s ease;
+    width: 100%;
+}
+
+.btn:hover {
+    background-color: #333333;
+}
+
+.btn:disabled {
+    background-color: #666666;
+    cursor: not-allowed;
+}
+
+/* Loading and Error States */
+.loading {
+    text-align: center;
+    padding: 2rem;
+    font-size: 1.1rem;
+}
+
+.error {
+    background-color: #f8f8f8;
+    border: 2px solid #000000;
+    padding: 1rem;
+    margin: 1rem 0;
+    text-align: center;
+}
+
+/* Commits Display */
+.commits-container {
+    margin-top: 2rem;
+}
+
+.commit-item {
+    background-color: #f8f8f8;
+    border: 1px solid #000000;
+    padding: 1.5rem;
+    margin-bottom: 1rem;
+}
+
+.commit-message {
+    font-size: 1.1rem;
+    font-weight: bold;
+    margin-bottom: 0.5rem;
+    word-wrap: break-word;
+}
+
+.commit-meta {
+    color: #666666;
+    font-size: 0.9rem;
+    margin-bottom: 0.5rem;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1rem;
+}
+
+.commit-author {
+    font-weight: bold;
+    color: #000000;
+}
+
+.commit-sha {
+    font-family: monospace;
+    background-color: #ffffff;
+    padding: 0.2rem 0.5rem;
+    border: 1px solid #cccccc;
+    display: inline-block;
+    margin-top: 0.5rem;
+    font-size: 0.8rem;
+}
+
+/* Footer Styles */
+.footer {
+    background-color: #000000;
+    color: #ffffff;
+    padding: 4rem 0 1rem;
+    margin-top: auto;
+}
+
+.footer-content {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 2rem;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 4rem;
+    align-items: start;
+}
+
+.footer-info {
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+}
+
+.footer-info h3 {
+    font-size: 1.5rem;
+    margin-bottom: 1rem;
+}
+
+.footer-info p {
+    color: #cccccc;
+    line-height: 1.8;
+}
+
+.contact-form {
+    background-color: #111111;
+    padding: 2rem;
+    border: 1px solid #333333;
+}
+
+.contact-form h3 {
+    margin-bottom: 1.5rem;
+    font-size: 1.3rem;
+}
+
+.contact-form .form-group {
+    margin-bottom: 1rem;
+}
+
+.contact-form label {
+    color: #ffffff;
+    display: block;
+    margin-bottom: 0.5rem;
+    font-size: 0.9rem;
+}
+
+.contact-form input,
+.contact-form textarea {
+    width: 100%;
+    padding: 0.75rem;
+    border: 1px solid #333333;
+    background-color: #000000;
+    color: #ffffff;
+    font-size: 0.9rem;
+}
+
+.contact-form input::placeholder,
+.contact-form textarea::placeholder {
+    color: #666666;
+}
+
+.contact-form textarea {
+    height: 100px;
+    resize: vertical;
+}
+
+.contact-form .btn {
+    background-color: #ffffff;
+    color: #000000;
+    font-size: 0.9rem;
+    padding: 0.6rem 1.5rem;
+    width: auto;
+}
+
+.contact-form .btn:hover {
+    background-color: #cccccc;
+}
+
+.contact-form .btn:disabled {
+    background-color: #666666;
+    color: #333333;
+}
+
+/* Contact Form Messages */
+.contact-message {
+    margin-top: 1rem;
+    padding: 1rem;
+    border-radius: 4px;
+    text-align: center;
+}
+
+.contact-message.success {
+    background-color: #d4edda;
+    color: #155724;
+    border: 1px solid #c3e6cb;
+}
+
+.contact-message.error {
+    background-color: #f8d7da;
+    color: #721c24;
+    border: 1px solid #f5c6cb;
+}
+
+.footer-bottom {
+    grid-column: 1 / -1;
+    text-align: center;
+    margin-top: 3rem;
+    padding-top: 2rem;
+    border-top: 1px solid #333333;
+    color: #cccccc;
+}
+
+/* Tablet Responsive Design */
+@media (max-width: 1024px) {
+    .main-content {
+        padding: 1.5rem;
+    }
+
+    .hero-text h1 {
+        font-size: 2.2rem;
+    }
+
+    .search-form {
+        padding: 1.5rem;
+    }
+
+    .footer-content {
+        gap: 3rem;
+    }
+
+    .commit-meta {
+        flex-direction: column;
+        gap: 0.5rem;
+    }
+
+    .github-logo {
+        width: 70px;
+        height: 70px;
+    }
+}
+
+/* Mobile Responsive Design */
+@media (max-width: 768px) {
+    .nav-container {
+        padding: 0 1rem;
+    }
+
+    .nav-links {
+        display: none;
+        position: absolute;
+        top: 100%;
+        left: 0;
+        right: 0;
+        background-color: #000000;
+        flex-direction: column;
+        padding: 1rem;
+        gap: 0;
+    }
+
+    .nav-links.active {
+        display: flex;
+    }
+
+    .nav-links a {
+        padding: 1rem;
+        border-bottom: 1px solid #333333;
+    }
+
+    .menu-toggle {
+        display: block;
+    }
+
+    .hero-text h1 {
+        font-size: 1.8rem;
+    }
+
+    .hero-text p {
+        font-size: 1rem;
+    }
+
+    .github-logo {
+        width: 60px;
+        height: 60px;
+    }
+
+    .main-content {
+        padding: 1rem;
+    }
+
+    .search-form {
+        padding: 1rem;
+        margin: 0 0 2rem 0;
+    }
+
+    .form-row {
+        grid-template-columns: 1fr;
+        gap: 0;
+    }
+
+    .footer-content {
+        grid-template-columns: 1fr;
+        gap: 2rem;
+        padding: 0 1rem;
+    }
+
+    .footer-info {
+        order: 2;
+    }
+
+    .contact-form {
+        order: 1;
+        padding: 1.5rem;
+    }
+
+    .commit-item {
+        padding: 1rem;
+    }
+
+    .commit-message {
+        font-size: 1rem;
+    }
+}
+
+/* Small Mobile */
+@media (max-width: 480px) {
+    .nav-container {
+        padding: 0 0.5rem;
+    }
+
+    .logo {
+        font-size: 1.2rem;
+    }
+
+    .hero-text h1 {
+        font-size: 1.5rem;
+    }
+
+    .hero-text p {
+        font-size: 0.9rem;
+    }
+
+    .github-logo {
+        width: 50px;
+        height: 50px;
+    }
+
+    .main-content {
+        padding: 0.5rem;
+    }
+
+    .search-form {
+        padding: 0.8rem;
+    }
+
+    .form-group input {
+        padding: 0.6rem;
+        font-size: 0.9rem;
+    }
+
+    .btn {
+        padding: 0.6rem 1rem;
+        font-size: 0.9rem;
+    }
+
+    .commit-item {
+        padding: 0.8rem;
+    }
+
+    .contact-form {
+        padding: 1rem;
+    }
+
+    .footer-content {
+        padding: 0 0.5rem;
+    }
+}
