@@ -6,7 +6,7 @@
 
 body {
     font-family: 'Arial', sans-serif;
-    background-color: #ffffff;
+    background-color: hsl(111, 41%, 85%);
     color: #000000;
     line-height: 1.6;
     min-height: 100vh;
@@ -115,7 +115,7 @@ body {
 
 .hero-text p {
     font-size: 1.1rem;
-    color: #666666;
+    color: hsl(0, 9%, 26%);
     max-width: 600px;
 }
 
@@ -124,6 +124,7 @@ body {
     background-color: #f8f8f8;
     padding: 2rem;
     border: 2px solid #000000;
+    border-radius: 1.3rem;
     margin-bottom: 2rem;
     max-width: 600px;
     margin-left: auto;
